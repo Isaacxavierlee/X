@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker Dashboard</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+  <div id="expense-container">
+    <div id="expense-header">
+      <h1>Expense Tracker Dashboard</h1>
+    </div>
+
+    <!-- Chatbot icon on the right side -->
+    <div id="chat-icon" onclick="toggleChat()">
+      <img src="bot-icon.png" alt="Chatbot Icon">
+    </div>
+
+
+
+
+
+
+
+    <!-- Chat container initially hidden -->
+    <div id="chat-container" class="hidden">
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div id="expense-form">
+      <h2>Add Expense</h2>
+      <label for="expense-name">Expense Name:</label>
+      <input type="text" id="expense-name" placeholder="Enter expense name">
+
+      <label for="expense-amount">Expense Amount:</label>
+      <input type="number" id="expense-amount" placeholder="Enter expense amount">
+
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <div id="expense-summary-container">
+      <div id="expense-summary">
+        <h2>Isaac Xavier's Expense Summary</h2>
+        <p>Total Expense Limit: $<span id="total-limit">0.00</span></p>
+        <p>Remaining Budget: $<span id="remaining-budget">0.00</span></p>
+      </div>
+    </div>
+
+    <div id="expense-chart">
+      <h2>Expense Distribution</h2>
+      <canvas id="expense-pie-chart"></canvas>
+    </div>
+
+    <div id="expense-list">
+      <h2>Expense List</h2>
+      <ul id="expenses"></ul>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script>
+    // Function to toggle the chat container visibility
+    function toggleChat() {
+      var chatContainer = document.getElementById("chat-container");
+      chatContainer.classList.toggle("hidden");
+    }
+
+    // Initial chatbot message
+    var chatMessages = document.getElementById("chat-messages");
+    var isaacGreeting = document.createElement("div");
+    isaacGreeting.className = "message isaac-message";
+    isaacGreeting.textContent = "Isaac: Hi there! I'm Isaac, your expense tracking assistant. How can I help you with your expenses today?";
+    chatMessages.appendChild(isaacGreeting);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+#expense-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#expense-form,
+#expense-chart,
+#expense-list,
+#expense-summary-container {
+  background-color: #343b48;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  flex: 1 1 300px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #4a5164;
+  background-color: #3a3f4b;
+  color: #fff;
+}
+
+button {
+  padding: 12px;
+  background: linear-gradient(to right, #4caf50, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #45a049, #4caf50);
+}
+
+#expenses {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a5164;
+  padding: 10px 0;
+}
+
+#expense-summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#expense-pie-chart {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #343b48;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#expense-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#expense-header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #3498db; /* Add a cool color to the title */
+}
+
+#chat-container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user-message {
+    color: #3498db;
+}
+
+.isaac-message {
+    color: #2ecc71;
+}
+
+.hidden {
+    display: none;
+}
+
+#chat-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#chat-icon img {
+    width: 50px;
+    height: 50px;
+}
